@@ -16,7 +16,7 @@
   <!-- slick slider -->
   <link rel="stylesheet" href="{% static 'First/plugins/slick/slick.css'" %}>
   <!-- themefy-icon -->
-  <link rel="stylesheet" href="{% static 'First/plugins/themify-icons/themify-icons.css'">
+  <link rel="stylesheet" href="{% static 'First/plugins/themify-icons/themify-icons.css' %}">
 
   <!-- Main Stylesheet -->
   <link href="{% static 'First/css/style.css' %}" rel="stylesheet">
@@ -24,6 +24,7 @@
   <!--Favicon-->
   <link rel="shortcut icon" href="{% static 'First/images/favicon.ico' %}" type="image/x-icon">
   <link rel="icon" href="{% static 'First/images/favicon.ico' %}" type="image/x-icon">
+  
 
 </head>
 
@@ -138,7 +139,7 @@
 <!-- ./Work Process -->
 
 <!-- team -->
-<section class="section bg-cover" data-background="images/backgrounds/team-bg.png">
+<section class="section bg-cover" data-background="{% static 'First/images/backgrounds/team-bg.png' %}">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
@@ -177,6 +178,7 @@
 <!-- /team -->
 
 <!-- clients -->
+
 <section class="section">
   <div class="container">
     <div class="row">
@@ -196,22 +198,23 @@
           <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
               src="{% static 'First/images/clients-logo/client-logo-4.png' %}" alt="client-logo"></a>
           <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-              src="images/clients-logo/client-logo-5.png" alt="client-logo"></a>
+              src="{% static 'First/images/clients-logo/client-logo-5.png' %}" alt="client-logo"></a>
           <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-              src="images/clients-logo/client-logo-1.png" alt="client-logo"></a>
+              src="{% static 'First/images/clients-logo/client-logo-1.png' %}" alt="client-logo"></a>
           <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-              src="images/clients-logo/client-logo-2.png" alt="client-logo"></a>
+              src="{% static 'First/images/clients-logo/client-logo-2.png' %}" alt="client-logo"></a>
           <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-              src="images/clients-logo/client-logo-3.png" alt="client-logo"></a>
+              src="{% static 'First/images/clients-logo/client-logo-3.png' %}" alt="client-logo"></a>
           <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-              src="images/clients-logo/client-logo-4.png" alt="client-logo"></a>
+              src="{% static 'First/images/clients-logo/client-logo-4.png' %} " alt="client-logo"></a>
           <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-              src="images/clients-logo/client-logo-5.png" alt="client-logo"></a>
+              src="{% static 'First/images/clients-logo/client-logo-5.png' %}" alt="client-logo"></a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <!-- /clients -->
 
 <!-- contact -->
@@ -276,6 +279,7 @@
 <!-- /footer -->
 
 <!-- jQuery -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="{% static 'First/plugins/jQuery/jquery.min.js' %}"></script>
 <!-- Bootstrap JS -->
 <script src="{% static 'First/plugins/bootstrap/bootstrap.min.js' %}"></script>
