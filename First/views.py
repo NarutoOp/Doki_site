@@ -17,3 +17,9 @@ def contact(request):
 
 def portfolio(request):
 	return render(request, 'First/portfolio.html')
+
+def practice(request):
+	return render(request, 'First/practice.html')
+
+def example(request):
+	return render(request, 'First/example.html')

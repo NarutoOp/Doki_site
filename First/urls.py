@@ -9,4 +9,6 @@ urlpatterns = [
     path('portfolio/',views.portfolio,name='doki-portfolio'),
 	path('blog/',views.blog,name='doki-blog'),
 	path('blog-single/',views.blogSingle,name='doki-blog-single'),
+	path('practice/',views.practice,name='doki-practice'),
+	path('example/',views.example,name='doki-example'),
 ]

@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slick Playground</title>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="{% static 'First/plugins/bootstrap/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+  <link rel="stylesheet" href="https://unpkg.com/@icon/themify-icons/themify-icons.css">
+
+
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        
+
+</head>
+<body>
+<!-- <div class="slider testimonial">
+  <div>Arpit</div>
+  <div>Gupta</div>
+  <div>your content</div>
+</div>
+ -->
+
+
+
+
+  <div class="col-lg-10 mx-auto testimonial">
+    <!-- slider-item -->
+    <div class="text-center">
+      <i class="ti ti-quote-right text-white icon mb-4 d-inline-block"></i>
+      <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit
+        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <img class="img-fluid rounded-circle mb-4 d-inline-block" src="{% static 'First/images/testimonial/client-1.png' %}"
+        alt="client-image">
+      <h4 class="text-white">Jesica Gomez</h4>
+      <h6 class="text-light mb-4">CEO, Funder</h6>
+    </div>
+    <!-- slider-item -->
+    <div class="text-center">
+      <i class="ti ti-quote-right text-white icon mb-4 d-inline-block"></i>
+      <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation
+          ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in
+        voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur.</p>
+      <img class="img-fluid rounded-circle mb-4 d-inline-block" src="{% static 'First/images/testimonial/client-1.png' %}"
+        alt="client-image">
+      <h4 class="text-white">Jesica Gomez</h4>
+      <h6 class="text-light mb-4">CEO, Funder</h6>
+    </div>
+    <!-- slider-item -->
+    <div class="text-center">
+      <i class="ti ti-quote-right text-white icon mb-4 d-inline-block"></i>
+      <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation
+          ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in
+        voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur.</p>
+      <img class="img-fluid rounded-circle mb-4 d-inline-block" src="{% static 'First/images/testimonial/client-1.png' %}"
+        alt="client-image">
+      <h4 class="text-black">Jesica Gomez</h4>
+      <h6 class="text-light mb-4">CEO, Funder</h6>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript">
+   $('.demo').slick();
+
+   $('.testimonial').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        arrows: false,
+        adaptiveHeight: true
+    });
+</script>
+
+</body>
+</html>
