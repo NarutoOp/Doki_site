@@ -3,5 +3,10 @@ from django.urls import path
 
 urlpatterns = [
     
-    path('about/',views.about,name='blog-about'),
+    path('',views.index,name='doki-index'),
+    path('about/',views.about,name='doki-about'),
+    path('contact/',views.contact,name='doki-contact'),
+    path('portfolio/',views.portfolio,name='doki-portfolio'),
+	path('blog/',views.blog,name='doki-blog'),
+	path('blog-single/',views.blogSingle,name='doki-blog-single'),
 ]
