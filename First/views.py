@@ -1,11 +1,15 @@
 from django.shortcuts import render
+from .models import Project
 
 def about(request):
 	return render(request, 'First/about.html')
 
 def index(request):
-	return render(request, 'First/index.html')
-
+	context = {
+		'posts': Project.objects.all()
+	}
+	return render(request, 'First/index.html',context)
+	
 def blog(request):
 	return render(request, 'First/blog.html')
 
