@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from .models import Project
+from .models import project
 
 def about(request):
 	return render(request, 'First/about.html')
 
 def index(request):
 	context = {
-		'posts': Project.objects.all()
+		'posts': project.objects.all()
 	}
 	return render(request, 'First/index.html',context)
 	
