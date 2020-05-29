@@ -179,6 +179,11 @@ img {
   border: 0;
 }
 
+.img-responsive {
+    width: auto;
+    height: 100px;
+}
+
 a,
 a:hover,
 a:focus {

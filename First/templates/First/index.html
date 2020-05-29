@@ -325,7 +325,7 @@
       {% for post in posts %}
       <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
         <article class="card shadow">
-          <img class="rounded card-img-top" src="{% static 'First/images/blog/post-3.jpg' %}" alt="post-thumb">
+          <img class="rounded card-img-top" src="media/{{ post.project_img }}" alt="post-thumb" style="height: 240px;">
           <div class="card-body">
             <h4 class="card-title"><a class="text-dark" href="blog-single.html">{{ post.title }}</a>
             </h4>
@@ -472,6 +472,8 @@
     </div>
   </div>
 </section>
+
+
 <!-- /blog -->
 
 {% endblock content %}
