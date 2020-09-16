@@ -14,7 +14,7 @@ urlpatterns = [
 	path('blog-single/',views.blogSingle,name='doki-blog-single'),
 	path('practice/',views.practice,name='doki-practice'),
 	path('example/',views.example,name='doki-example'),
-	path('image_upload', hotel_image_view, name = 'image_upload'), 
+	path('delete_project/<int:id>/',views.delete_project , name = 'delete_project'),
     path('success', success, name = 'success'),
 ]
 if settings.DEBUG: 

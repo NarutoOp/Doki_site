@@ -25,24 +25,29 @@ def portfolio(request):
 	return render(request, 'First/portfolio.html')
 
 def practice(request):
-	return render(request, 'First/practice.html')
+	shows = project.objects.all()
+
+	if request.method == 'POST':
+		form = Form(request.POST, request.FILES)
+		if form.is_valid():
+			form.save()
+			return redirect('success')
+	else:
+		form = Form()
+	return render(request, 'First/practice.html',{
+		'shows' : shows,
+		'form' : form
+	})
+
+def delete_project(request, id):
+	if request.method == 'POST':
+		proj = project.objects.get(id=id)
+		proj.delete()
+		return redirect('success')
 
 def example(request):
-	return render(request, 'First/example.html')
-
-
-def hotel_image_view(request): 
+	return render(request, 'First/example.html')  
   
-    if request.method == 'POST': 
-        form = HotelForm(request.POST, request.FILES) 
-  
-        if form.is_valid(): 
-            form.save() 
-            return redirect('success') 
-    else: 
-        form = HotelForm() 
-    return render(request, 'First/form.html', {'form' : form}) 
-  
-  
-def success(request): 
-    return HttpResponse('successfully uploaded')
+def success(request):
+	HttpResponse('successfully uploaded')
+	return redirect('practice/')
