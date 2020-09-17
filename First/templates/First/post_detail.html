@@ -24,8 +24,11 @@
 <section class="section">
   <div class="container">
     <div class="row">
-        <article class="card shadow">
-          <img class="rounded card-img-top" src="media/{{ object.post_img }}" alt="post-thumb" style="height: 240px;width:300px;">
+      <div class="col-lg-5">
+        <img class="rounded card-img-top" src="../../media/{{ object.post_img }}" alt="post-thumb">
+      </div>
+      <div class="col-lg-7">
+        <article class="card shadow border">    
           <div class="card-body">
             <h4 class="card-title"><a class="text-dark" href="blog-single.html">{{ object.title }}</a>
             </h4>
@@ -33,19 +36,10 @@
             <p class="cars-text">{{ object.content }}</p>
           </div>
         </article>
-    </div>
-  </div>
-</section>
-<!-- portfolio -->
-<section class="section">
-  <div class="container">
-    <div class="row mb-5">
-      <div class="col-12">
-        
       </div>
     </div>
   </div>
 </section>
-<!-- /portfolio -->
+<!-- portfolio -->
 
 {% endblock content %}

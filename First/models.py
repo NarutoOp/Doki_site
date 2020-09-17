@@ -5,6 +5,7 @@ class project(models.Model):
 	title = models.CharField(max_length=100)
 	date_posted = models.DateTimeField(default=timezone.now)
 	project_img = models.ImageField(upload_to='images/')
+	content = models.TextField()
 
 
 	def __str__(self):

@@ -256,7 +256,7 @@
             <h4 class="card-title"><a class="text-dark" href="blog-single.html">{{ proj.title }}</a>
             </h4>
             <h5 class="cars-text">{{ proj.date_posted|date:"F d,Y" }} </h5>
-            <p class="cars-text">Hello Everyone! Have a great day :) I am here to help you. If you want to know something or you have any suggestion then please mail me. Thank You.</p>
+            <p class="cars-text">Hello Everyone! Have a great day :) I am here to help you. If you want to read further click Read More or you have any suggestion then please mail me. Thank You.</p>
             <a href="project/{{ proj.id }}" class="btn btn-xs btn-primary">Read More</a>
           </div>
         </article>
@@ -355,15 +355,15 @@
       <div class="col-12 text-center">
         <h2 class="section-title">Blogs</h2>
       </div>
-      {% for post in posts %}
+      {% for post in posts|slice:":3" %}
       <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
         <article class="card shadow">
-          <img class="rounded card-img-top" src="{% static 'First/images/blog/post-3.jpg' %}" alt="post-thumb">
+          <img class="rounded card-img-top" src="media/{{ post.post_img }}" alt="post-thumb" style="height:250px;">
           <div class="card-body">
             <h4 class="card-title"><a class="text-dark" href="{{ post.id }}">{{ post.title }}</a>
             </h4>
-            <p class="cars-text">{{ post.content }} </p>
-            <a href="post/{{ post.id })" class="btn btn-xs btn-primary">Read More</a>
+            <p class="cars-text">{{ post.date_posted|date:"F d,Y" }} </p>
+            <a href="blog/{{ post.id }}" class="btn btn-xs btn-primary">Read More</a>
           </div>
         </article>
       </div>
