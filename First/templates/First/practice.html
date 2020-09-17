@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body class="container mt-5">
-  <h2 class="text-center">Show</h2>
+  <h2 class="text-center">Show Project</h2>
   <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#exampleModal">
     UPLOAD
   </button>
@@ -53,12 +53,12 @@
         {% for show in shows %}
         <tr>
           <td>{{ show.title }}</td>
-          <td>{{ show.date_posted }}</td>
+          <td>{{ show.date_posted|date:"F d,Y" }}</td>
           <td><img src="../media/{{ show.project_img }}" style="height: 240px;width:300px;"></td>
           <td>
             <form method="post" action="{% url 'delete_project' show.id %}">
             {% csrf_token %}
-            <button type="submit">Delete</button>
+            <button class="btn btn-danger" type="submit">Delete</button>
             
             </form>
           </td>

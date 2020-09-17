@@ -7,7 +7,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <h1 class="text-white font-tertiary">Portfolio</h1>
+        <h1 class="text-white font-tertiary">Blog</h1>
       </div>
     </div>
   </div>
@@ -24,15 +24,15 @@
 <section class="section">
   <div class="container">
     <div class="row">
-      {% for post in projects %}
+      {% for post in posts %}
       <div class="col-lg-4 col-sm-6 mb-4">
         <article class="card shadow">
-          <img class="rounded card-img-top" src="../media/{{ post.project_img }}" alt="post-thumb" style="height: 240px;">
+          <img class="rounded card-img-top" src="/media/{{ post.post_img }}" alt="post-thumb" style="height: 240px;">
           <div class="card-body">
             <h4 class="card-title"><a class="text-dark" href="blog-single.html">{{ post.title }}</a>
             </h4>
             <h5 class="cars-text">{{ post.date_posted|date:"F d,Y" }} </h5>
-            <p class="cars-text">Hello Everyone! Have a great day :) I am here to help you. If you want to know something or you have any suggestion then please mail me. Thank You.</p>
+            <p class="cars-text">{{ post.content }}</p>
             <a href="{{ post.id }}" class="btn btn-xs btn-primary">Read More</a>
           </div>
         </article>

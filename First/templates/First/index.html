@@ -240,68 +240,6 @@
 </section>
 <!-- /services -->
 
-<!-- portfolio -->
-<!-- <section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2 class="section-title">Portfolio</h2>
-      </div>
-    </div>
-    <div class="row shuffle-wrapper">
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
-        <div class="position-relative rounded hover-wrapper">
-          <img src="{% static 'First/images/portfolio/item-1.png' %}" alt="portfolio-image" class="img-fluid rounded w-100">
-          <div class="hover-overlay">
-            <div class="hover-content">
-              <a class="btn btn-light btn-sm" href="project-single.html">view project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
-        <div class="position-relative rounded hover-wrapper">
-          <img src="{% static 'First/images/portfolio/item-2.png' %}" alt="portfolio-image" class="img-fluid rounded w-100">
-          <div class="hover-overlay">
-            <div class="hover-content">
-              <a class="btn btn-light btn-sm" href="project-single.html">view project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
-        <div class="position-relative rounded hover-wrapper">
-          <img src="{% static 'First/images/portfolio/item-3.png' %}" alt="portfolio-image" class="img-fluid rounded w-100">
-          <div class="hover-overlay">
-            <div class="hover-content">
-              <a class="btn btn-light btn-sm" href="project-single.html">view project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
-        <div class="position-relative rounded hover-wrapper">
-          <img src="{% static 'First/images/portfolio/item-4.png' %}" alt="portfolio-image" class="img-fluid rounded w-100">
-          <div class="hover-overlay">
-            <div class="hover-content">
-              <a class="btn btn-light btn-sm" href="project-single.html">view project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
-        <div class="position-relative rounded hover-wrapper">
-          <img src="{% static 'First/images/portfolio/item-5.png' %}" alt="portfolio-image" class="img-fluid rounded w-100">
-          <div class="hover-overlay">
-            <div class="hover-content">
-              <a class="btn btn-light btn-sm" href="project-single.html">view project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 
 <section class="section">
@@ -310,16 +248,16 @@
       <div class="col-12 text-center">
         <h2 class="section-title">PortFolio</h2>
       </div>
-      {% for post in posts %}
+      {% for proj in projects|slice:":3" %}
       <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
         <article class="card shadow">
-          <img class="rounded card-img-top" src="media/{{ post.project_img }}" alt="post-thumb" style="height: 240px;">
+          <img class="rounded card-img-top" src="media/{{ proj.project_img }}" alt="post-thumb" style="height: 240px;">
           <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="blog-single.html">{{ post.title }}</a>
+            <h4 class="card-title"><a class="text-dark" href="blog-single.html">{{ proj.title }}</a>
             </h4>
-            <h5 class="cars-text">{{ post.date_posted }} </h5>
+            <h5 class="cars-text">{{ proj.date_posted|date:"F d,Y" }} </h5>
             <p class="cars-text">Hello Everyone! Have a great day :) I am here to help you. If you want to know something or you have any suggestion then please mail me. Thank You.</p>
-            <a href="{% url 'doki-blog-single' %}" class="btn btn-xs btn-primary">Read More</a>
+            <a href="project/{{ proj.id }}" class="btn btn-xs btn-primary">Read More</a>
           </div>
         </article>
       </div>
@@ -416,39 +354,19 @@
       <div class="col-12 text-center">
         <h2 class="section-title">Blogs</h2>
       </div>
+      {% for post in posts %}
       <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
         <article class="card shadow">
           <img class="rounded card-img-top" src="{% static 'First/images/blog/post-3.jpg' %}" alt="post-thumb">
           <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="blog-single.html">DeathNote</a>
+            <h4 class="card-title"><a class="text-dark" href="{{ post.id }}">{{ post.title }}</a>
             </h4>
-            <p class="cars-text">If you haven't heard deathnote till now then boy you have serious problem. You need serious attention.This anime is like cat fight between detective and culprit.But the series is taken to another level with mind twisting plot. </p>
-            <a href="{% url 'doki-blog-single' %}" class="btn btn-xs btn-primary">Read More</a>
+            <p class="cars-text">{{ post.content }} </p>
+            <a href="post/{{ post.id })" class="btn btn-xs btn-primary">Read More</a>
           </div>
         </article>
       </div>
-      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-        <article class="card shadow">
-          <img class="rounded card-img-top" src="{% static 'First/images/blog/post-4.jpg' %}" alt="post-thumb">
-          <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="{% url 'doki-blog-single' %}">Higurashi</a>
-            </h4>
-            <p class="cars-text">Higurashi is a horror anime which divided into several chapters.The story with the base created at first serves really awesome dish which you will definitely like.</p>
-            <a href="{% url 'doki-blog-single' %}" class="btn btn-xs btn-primary">Read More</a>
-          </div>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-        <article class="card shadow">
-          <img class="rounded card-img-top" src="{% static 'First/images/blog/post-2.jpg' %}" alt="post-thumb">
-          <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="{% url 'doki-blog-single' %}">Code Geass</a>
-            </h4>
-            <p class="cars-text">One of the top animes of my anime list .It is rebelion of one person to change the world, people .To make the world beautiful place for his younger sister to live. </p>
-            <a href="{% url 'doki-blog-single' %}" class="btn btn-xs btn-primary">Read More</a>
-          </div>
-        </article>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

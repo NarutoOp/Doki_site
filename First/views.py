@@ -1,6 +1,7 @@
 from django.http import HttpResponse 
 from django.shortcuts import render, redirect
-from .models import project
+from django.views.generic import ListView,DetailView
+from .models import project,post
 from .forms import *
 
 def about(request):
@@ -8,21 +9,14 @@ def about(request):
 
 def index(request):
 	context = {
-		'posts': project.objects.all()
+		'projects': project.objects.all(),
+		'posts': post.objects.all()
 	}
 	return render(request, 'First/index.html',context)
-	
-def blog(request):
-	return render(request, 'First/blog.html')
-
-def blogSingle(request):
-	return render(request, 'First/blog-single.html')
 
 def contact(request):
 	return render(request, 'First/contact.html')
 
-def portfolio(request):
-	return render(request, 'First/portfolio.html')
 
 def practice(request):
 	shows = project.objects.all()
@@ -31,7 +25,7 @@ def practice(request):
 		form = Form(request.POST, request.FILES)
 		if form.is_valid():
 			form.save()
-			return redirect('success')
+			return redirect('/practice')
 	else:
 		form = Form()
 	return render(request, 'First/practice.html',{
@@ -43,11 +37,27 @@ def delete_project(request, id):
 	if request.method == 'POST':
 		proj = project.objects.get(id=id)
 		proj.delete()
-		return redirect('success')
+		return redirect('/practice/')
 
 def example(request):
-	return render(request, 'First/example.html')  
-  
-def success(request):
-	HttpResponse('successfully uploaded')
-	return redirect('practice/')
+	return render(request, 'First/example.html')
+
+
+class ProjListView(ListView):
+	model = project
+	template_name = 'First/portfolio.html'
+	context_object_name = 'projects'
+	ordering = ['-date_posted']
+
+class ProjDetailView(DetailView):
+	model = project
+
+
+class PostListView(ListView):
+	model = post
+	template_name = 'First/post.html'
+	context_object_name = 'posts'
+	ordering = ['-date_posted']
+
+class PostDetailView(DetailView):
+	model = post
