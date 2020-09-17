@@ -24,8 +24,12 @@
 <section class="section">
   <div class="container">
     <div class="row">
-        <article class="card shadow">
-          <img class="rounded card-img-top" src="../../media/{{ object.project_img }}" alt="post-thumb" style="height: 240px;width:300px;">
+      <div class="col-lg-5">
+        <img class="rounded card-img-top" src="../../media/{{ object.project_img }}" alt="post-thumb">
+        <button type="button" class="btn btn-outline-secondary mt-5 btn-sm"><a href="https://github.com/NarutoOp">Source Code</button>
+      </div>
+      <div class="col-lg-7">
+        <article class="card shadow border">    
           <div class="card-body">
             <h4 class="card-title"><a class="text-dark" href="blog-single.html">{{ object.title }}</a>
             </h4>
@@ -33,19 +37,10 @@
             <p class="cars-text">Hello Everyone! Have a great day :) I am here to help you. If you want to know something or you have any suggestion then please mail me. Thank You.</p>
           </div>
         </article>
-    </div>
-  </div>
-</section>
-<!-- portfolio -->
-<section class="section">
-  <div class="container">
-    <div class="row mb-5">
-      <div class="col-12">
-        
       </div>
     </div>
   </div>
 </section>
-<!-- /portfolio -->
+<!-- portfolio -->
 
 {% endblock content %}
