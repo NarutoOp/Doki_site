@@ -1,1 +1,1 @@
-web : gunicorn Doki_site.wsgi
+web: gunicorn doki_site.wsgi 
