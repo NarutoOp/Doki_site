@@ -251,7 +251,7 @@
       {% for proj in projects|slice:":3" %}
       <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
         <article class="card shadow">
-          <img class="rounded card-img-top" src="media/{{ proj.project_img }}" alt="post-thumb" style="height: 240px;">
+          <img class="rounded card-img-top" src="{{ proj.project_img.url }}" alt="post-thumb" style="height: 240px;">
           <div class="card-body">
             <h4 class="card-title"><a class="text-dark" href="blog-single.html">{{ proj.title }}</a>
             </h4>
@@ -358,7 +358,7 @@
       {% for post in posts|slice:":3" %}
       <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
         <article class="card shadow">
-          <img class="rounded card-img-top" src="media/{{ post.post_img }}" alt="post-thumb" style="height:250px;">
+          <img class="rounded card-img-top" src="{{ post.post_img.url }}" alt="post-thumb" style="height:250px;">
           <div class="card-body">
             <h4 class="card-title"><a class="text-dark" href="{{ post.id }}">{{ post.title }}</a>
             </h4>

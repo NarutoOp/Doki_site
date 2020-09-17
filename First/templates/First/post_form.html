@@ -54,7 +54,7 @@
         <tr>
           <td>{{ show.title }}</td>
           <td>{{ show.date_posted|date:"F d,Y" }}</td>
-          <td><img src="../media/{{ show.post_img }}" style="height: 240px;width:300px;"></td>
+          <td><img src="{{ show.post_img.url }}" style="height: 240px;width:300px;"></td>
           <td>
             <form method="post" action="{% url 'delete_post' show.id %}">
             {% csrf_token %}

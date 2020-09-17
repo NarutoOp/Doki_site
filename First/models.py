@@ -4,7 +4,7 @@ from django.utils import timezone
 class project(models.Model):
 	title = models.CharField(max_length=100)
 	date_posted = models.DateTimeField(default=timezone.now)
-	project_img = models.ImageField(upload_to='images/')
+	project_img = models.ImageField(default='images/item-3.png',upload_to='images/')
 	content = models.TextField()
 
 
@@ -18,7 +18,7 @@ class project(models.Model):
 class post(models.Model):
 	title = models.CharField(max_length=100)
 	date_posted = models.DateTimeField(default=timezone.now)
-	post_img = models.ImageField(upload_to='images/')
+	post_img = models.ImageField(default='images/item-3.png',upload_to='images/')
 	content = models.TextField()
 
 
