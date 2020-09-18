@@ -24,17 +24,17 @@
 <section class="section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-5">
-        <img class="rounded card-img-top" src="{{ object.project_img.url }}" alt="post-thumb">
-        <button type="button" class="btn btn-outline-secondary mt-5 btn-sm"><a href="https://github.com/NarutoOp">Source Code</button>
+      <div class="col-lg-4">
+        <img class="rounded card-img-top border" src="{{ object.project_img.url }}" alt="post-thumb" style="height:240px;">
+        <button type="button" class="btn btn-outline-secondary mt-5 btn-sm"><a href="https://github.com/NarutoOp">Source Code</a></button>
       </div>
-      <div class="col-lg-7">
+      <div class="col-lg-8">
         <article class="card shadow border">    
           <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="blog-single.html">{{ object.title }}</a>
+            <h4 class="card-title">{{ object.title }}
             </h4>
-            <h5 class="cars-text">{{ object.date_posted|date:"F d,Y" }} </h5>
-            <p class="cars-text">{{ object.content }}</p>
+            <h5 class="article-content">{{ object.date_posted|date:"F d,Y" }}</h5>
+            {{ object.content|safe }}
           </div>
         </article>
       </div>

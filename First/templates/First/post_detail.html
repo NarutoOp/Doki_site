@@ -24,16 +24,16 @@
 <section class="section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-5">
-        <img class="rounded card-img-top" src="{{ object.post_img.url }}" alt="post-thumb">
+      <div class="col-lg-4">
+        <img class="rounded card-img-top" src="{{ object.post_img.url }}" style="height:240px;" alt="post-thumb">
       </div>
-      <div class="col-lg-7">
+      <div class="col-lg-8">
         <article class="card shadow border">    
           <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="blog-single.html">{{ object.title }}</a>
+            <h4 class="card-title">{{ object.title }}
             </h4>
             <h5 class="cars-text">{{ object.date_posted|date:"F d,Y" }} </h5>
-            <p class="cars-text">{{ object.content }}</p>
+            {{ object.content|safe }}
           </div>
         </article>
       </div>

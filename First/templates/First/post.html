@@ -29,7 +29,7 @@
         <article class="card shadow">
           <img class="rounded card-img-top" src="{{ post.post_img.url }}" alt="post-thumb" style="height: 240px;">
           <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="blog-single.html">{{ post.title }}</a>
+            <h4 class="card-title">{{ post.title }}
             </h4>
             <h5 class="cars-text">{{ post.date_posted|date:"F d,Y" }} </h5>
             <p class="cars-text">{{ post.content }}</p>
