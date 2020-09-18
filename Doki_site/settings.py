@@ -30,10 +30,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://arpitfolio.herokuapp.com/']
+ALLOWED_HOSTS = ['https://arpitfolio.herokuapp.com']
 
 
-# Application definition
+# Application definitio
 
 INSTALLED_APPS = [
     'user.apps.UserConfig',
