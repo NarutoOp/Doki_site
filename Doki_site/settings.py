@@ -26,9 +26,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG_VALUE')
+# DEBUG = os.environ.get('DEBUG_VALUE')
 
-# DEBUG = False
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost','arpitfolio.herokuapp.com']
 
@@ -36,7 +36,6 @@ ALLOWED_HOSTS = ['localhost','arpitfolio.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
     'user.apps.UserConfig',
     'First.apps.FirstConfig',
     'django.contrib.admin',
