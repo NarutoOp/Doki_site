@@ -30,7 +30,7 @@ DEBUG = (os.environ.get('DEBUG_VALUE')== 'True')
 
 # DEBUG = False
 
-ALLOWED_HOSTS = ['arpitfolio.herokuapp.com']
+ALLOWED_HOSTS = ['localhost','arpitfolio.herokuapp.com']
 
 
 # Application definition
