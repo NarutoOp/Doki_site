@@ -56,14 +56,14 @@ def delete_project(request, id):
 	if request.method == 'POST':
 		proj = project.objects.get(id=id)
 		proj.delete()
-		return redirect('/proj_form')
+		return redirect('/proj_form/')
 
 @user_passes_test(lambda u: u.is_superuser)
 def delete_post(request, id):
 	if request.method == 'POST':
 		pos = post.objects.get(id=id)
 		pos.delete()
-		return redirect('/post_form')
+		return redirect('/post_form/')
 
 def example(request):
 	return render(request, 'First/example.html')
