@@ -1,4 +1,4 @@
-# My Portfolio Site ⚡️ [![GitHub](https://img.shields.io/github/license/narutoop/Doki_site?color=blue)](https://github.com/narutoop/Doki_site/blob/master/LICENSE.md) [![Visits Badge](https://badges.pufler.dev/visits/NarutoOp/doki_site)](https://badges.pufler.dev/visits/NarutoOp/doki_site)
+# My Portfolio Site ⚡️ [![Visits Badge](https://badges.pufler.dev/visits/NarutoOp/doki_site)](https://badges.pufler.dev/visits/NarutoOp/doki_site)
 
 ## A minimal Developer portfolio!
 
