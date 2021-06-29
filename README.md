@@ -1,6 +1,6 @@
 # Doki_site
 
-[![HitCount](http://hits.dwyl.com/NarutoOp/Doki_Site.svg)](http://hits.dwyl.com/NarutoOp/Doki_Site) [![Generic badge](https://img.shields.io/badge/Arpit-Gupta-1abc9c.svg)](https://github.com/NarutoOp)
+[![Visits Badge](https://badges.pufler.dev/visits/NarutoOp/doki_site)](https://badges.pufler.dev/visits/NarutoOp/doki_site)
 
 So basically it is a portfolio site , to show case my works ,skills and educational background.
 
