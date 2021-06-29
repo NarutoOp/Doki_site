@@ -11,7 +11,7 @@ Also it reflects my technical knowledge.
 ⚡️ Styled with Bootstrap v4.3 + Custom CSS\
 ⚡️ Fully Responsive\
 ⚡️ Valid HTML5 & CSS3\
-⚡ Made with Django
+⚡ Made with Django\
 ⚡️ Well organized documentation
 
 To view a demo example, **[click here](http://arpitfolio.herokuapp.com/)**
