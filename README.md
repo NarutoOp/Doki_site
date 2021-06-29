@@ -1,7 +1,25 @@
-# Doki_site
+# My Portfolio Site ⚡️ [![GitHub](https://img.shields.io/github/license/narutoop/Doki_site?color=blue)](https://github.com/narutoop/Doki_site/blob/master/LICENSE.md) [![Visits Badge](https://badges.pufler.dev/visits/NarutoOp/doki_site)](https://badges.pufler.dev/visits/NarutoOp/doki_site)
 
-[![Visits Badge](https://badges.pufler.dev/visits/NarutoOp/doki_site)](https://badges.pufler.dev/visits/NarutoOp/doki_site)
+## A minimal Developer portfolio!
 
 So basically it is a portfolio site , to show case my works ,skills and educational background.
+Also it reflects my technical knowledge.
 
-Also it reflects to some extent my technical knowledge.
+## Features
+
+⚡️ Modern UI Design + Reveal Animations\
+⚡️ Styled with Bootstrap v4.3 + Custom CSS\
+⚡️ Fully Responsive\
+⚡️ Valid HTML5 & CSS3\
+⚡ Made with Django
+⚡️ Well organized documentation
+
+To view a demo example, **[click here](http://arpitfolio.herokuapp.com/)**
+
+---
+
+## Need of portfolio for a developer ☝️
+
+- Professional way to showcase my work
+- Increases my visibility and online presence
+- Shows more than just a resume
