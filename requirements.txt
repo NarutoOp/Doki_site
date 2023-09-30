@@ -1,7 +1,7 @@
-boto3==1.14.63
-botocore==1.17.63
-bs4==0.0.1
-certifi==2023.7.22
+boto3
+botocore
+bs4
+certifi
 chardet
 dj-database-url
 Django
